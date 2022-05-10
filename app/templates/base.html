@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Wiki Search Engine</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.content {
+  background-color: #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a href="/">Home</a>
+  <a href="/instructions">Instructions</a>
+</div>
+
+<div class="content">
+  <h1>
+      <a href="/">Wiki Search Engine</a>
+    </h1>
+    <div class="search">
+        <form action="/search" method="POST">
+            <p>
+                <input type="text" placeholder="Search games" name="search_input" />
+                <input type="submit" value="Search" />
+            </p>
+            {% block paragraph %}{% endblock %}
+
+        </form>
+    {% block buttons %}{% endblock %}
+    {% block header2 %}{% endblock %}
+    {% block image %}{% endblock %}
+    {% block content %}{% endblock %}
+</div>
+
+<div class="footer" style="text-align: left;">
+  <p>© 2021 Corinne Bradford</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block buttons %}
+    <div class="buttons">
+        <p>
+            <form action="/random" method="POST">
+                <input type="submit" value="Random Article" name="random" />
+            </form>
+        </p>
+    </div>
+{% endblock %}
+{% block header2 %}
+    <h2>
+        <a href="{{wiki}}">
+            {{title}}
+        </a>
+    </h2>
+{% endblock %}
+{% block image %}
+    <img src="{{picture}}">
+{% endblock %}
+{% block content %}
+    <p>
+        {{content}}
+    </p>
+    <p>
+        <a href="{{google}}">
+            Click here to search Google
+        </a>
+    </p>
+{% endblock %}
